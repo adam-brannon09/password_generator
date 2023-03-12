@@ -20,32 +20,9 @@ function generatePassword() {
 
   var userInputs = promptUser()
   
-  //Testing Area **if statements for chars**
-  // if (charNum === true) {
-  //   charNum = "1234567890";
-  // }
 
-  // if (userInputs[2] === true) {
-  //   userInputs[2] = "abcdefghijklmnopqrstuvwxyz";
-  // }
-
-  // if (userInputs[3] === true) {
-  //   userInputs[3] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  // }
-
-  // if (userInputs[4] === true) {
-  //   userInputs[4] = "!@#$%";
-  // }
-  
-  // var totalInputs = userInputs[1, 2, 3, 4,]''
-  
-
-
-
-  //Testing area
-
-    var chars = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%"
-  
+    var chars = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%";
+      
     var password =""
   
     for (var i = 0; i <= userInputs[0]; i++) {
