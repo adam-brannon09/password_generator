@@ -8,7 +8,34 @@ function promptUser() {
   var charLower = confirm("Do you want to use lowercase letters?");
   var charUpper = confirm("Do you want to use uppercase letters?");
   var charSpecial = confirm("Do you want to use special characters?");
-  //Console log to test and verify user input was correct
+  
+  // if statements to determine what characters to use.
+  // numbers
+  if (charNum === false) {
+    charNum = ""
+  } else {
+    charNum = "1234567890"
+  }
+  // lowercase letters
+  if (charLower === false) {
+    charLower = ""
+  } else {
+    charLower = "abcdefghijklmnopqrstuvwxyz"
+  }
+  // uppercase letters
+  if (charUpper === false) {
+    charUpper = ""
+  } else {
+    charUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  }
+  // special characters
+  if (charSpecial === false) {
+    charSpecial = ""
+  } else {
+    charSpecial = "!@#$%&"
+  }
+
+  //Console.log for testing purposes in the console
   console.log(passwordLength, charNum, charLower, charUpper, charSpecial);
 
   return [passwordLength, charNum, charLower, charUpper, charSpecial];
@@ -18,10 +45,12 @@ function promptUser() {
 
 function generatePassword() {
 // Store variables to be used in password generation based on user input.
-  var userInputs = promptUser()
-  
+  var userInputs = promptUser();
+  var string = "";
 
-    var chars = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%&+*/";
+  var chars = string.concat(userInputs[1], userInputs[2], userInputs[3], userInputs[4])
+  //Console.log for testing purposes
+  console.log(chars);
       
   var password = "";
     // For loop to repeat math function to print the correct amount of characters requested.
@@ -32,7 +61,7 @@ function generatePassword() {
      }
       document.querySelector("#password").value = password;
       
-      return password
+  return password;
 
   }
   
